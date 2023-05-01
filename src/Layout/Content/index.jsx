@@ -8,9 +8,10 @@ import { ChatContext } from "../../Context";
 import axios from "axios";
 
 const Index = ({ smile }) => {
-  const { chat } = useContext(ChatContext);
-  const [messages, setMessages] = useState([]);
+  const { chat, Messages } = useContext(ChatContext);
+
   const user = JSON.parse(localStorage.getItem("user"));
+  const [messages, setMessages] = Messages;
 
   useEffect(() => {
     const url = "https://aticiliqkursu.az/v2.0.0//select.php";

@@ -20,6 +20,14 @@ root.render(
     <Routes>
       <Route path='whatsapp' element={<Outlet />}>
         <Route
+          index
+          element={
+            <IsLogin>
+              <Login />
+            </IsLogin>
+          }
+        />
+        <Route
           path='login'
           element={
             <IsLogin>
